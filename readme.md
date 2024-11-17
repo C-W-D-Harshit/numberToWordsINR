@@ -22,10 +22,7 @@ npm install number-to-words-inr
 Import the function and use it in your application.
 
 ```javascript
-const numberToWordsINR = require("number-to-words-inr");
-
-// or using ES6 import
-import numberToWordsINR from "number-to-words-inr";
+import { numberToWordsINR } from "number-to-words-inr";
 
 console.log(numberToWordsINR(12345)); // "twelve thousand three hundred and forty-five"
 console.log(numberToWordsINR(0)); // "zero"
