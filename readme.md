@@ -7,6 +7,7 @@ A lightweight utility to convert numbers into Indian Rupee words, following the 
 - Supports the Indian numbering system up to thousand crore.
 - Handles edge cases like 0 and large numbers gracefully.
 - Outputs results in a human-readable format.
+- Does not support floating-point numbers.
 
 ## Installation
 
@@ -21,16 +22,19 @@ npm install number-to-words-inr
 Import the function and use it in your application.
 
 ```javascript
-const numberToINRWords = require("number-to-words-inr");
+const numberToWordsINR = require("number-to-words-inr");
 
-console.log(numberToINRWords(12345)); // "twelve thousand three hundred and forty-five"
-console.log(numberToINRWords(0)); // "zero"
-console.log(numberToINRWords(987654321)); // "ninety-eight crore seventy-six lakh fifty-four thousand three hundred and twenty-one"
+// or using ES6 import
+import numberToWordsINR from "number-to-words-inr";
+
+console.log(numberToWordsINR(12345)); // "twelve thousand three hundred and forty-five"
+console.log(numberToWordsINR(0)); // "zero"
+console.log(numberToWordsINR(987654321)); // "ninety-eight crore seventy-six lakh fifty-four thousand three hundred and twenty-one"
 ```
 
 ## API
 
-`numberToINRWords(num: number): string`
+`numberToWordsINR(num: number): string`
 
 Converts a number to its equivalent in Indian Rupee words.
 

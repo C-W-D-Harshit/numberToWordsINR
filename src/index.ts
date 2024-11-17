@@ -14,7 +14,7 @@
  * The number is split into parts based on the Indian numbering system (units, thousands, lakhs, crores).
  * Each part is then converted to words and combined to form the final result.
  */
-export const numberToWordsINR = (num: number): string => {
+const numberToWordsINR = (num: number): string => {
   if (num === 0) return "zero";
 
   const ones = [
@@ -81,7 +81,7 @@ export const numberToWordsINR = (num: number): string => {
     return parts.reverse();
   };
 
-  const parts = splitByScale(num);
+  const parts = splitByScale(Math.floor(num));
   let words = "";
 
   for (let i = 0; i < parts.length; i++) {
@@ -90,5 +90,15 @@ export const numberToWordsINR = (num: number): string => {
     }
   }
 
+  // const decimalPart = num % 1;
+  // if (decimalPart > 0) {
+  //   const decimalWords = convertToWords(Math.round(decimalPart * 100));
+  //   words += `and ${decimalWords} paise`;
+  // }
+
   return words.trim();
 };
+
+console.log(numberToWordsINR(123456789.12)); // twelve thousand three hundred and forty-five
+
+export default numberToWordsINR;

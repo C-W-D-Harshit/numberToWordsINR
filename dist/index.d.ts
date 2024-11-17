@@ -14,4 +14,5 @@
  * The number is split into parts based on the Indian numbering system (units, thousands, lakhs, crores).
  * Each part is then converted to words and combined to form the final result.
  */
-export declare const numberToINRWords: (num: number) => string;
+declare const numberToWordsINR: (num: number) => string;
+export default numberToWordsINR;

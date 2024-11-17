@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.numberToINRWords = void 0;
 /**
  * Converts a given number to its equivalent in Indian Rupee words.
  *
@@ -17,7 +16,7 @@ exports.numberToINRWords = void 0;
  * The number is split into parts based on the Indian numbering system (units, thousands, lakhs, crores).
  * Each part is then converted to words and combined to form the final result.
  */
-const numberToINRWords = (num) => {
+const numberToWordsINR = (num) => {
     if (num === 0)
         return "zero";
     const ones = [
@@ -76,13 +75,19 @@ const numberToINRWords = (num) => {
         }
         return parts.reverse();
     };
-    const parts = splitByScale(num);
+    const parts = splitByScale(Math.floor(num));
     let words = "";
     for (let i = 0; i < parts.length; i++) {
         if (parts[i] > 0) {
             words += `${convertToWords(parts[i])} ${scales[parts.length - i - 1]} `;
         }
     }
+    // const decimalPart = num % 1;
+    // if (decimalPart > 0) {
+    //   const decimalWords = convertToWords(Math.round(decimalPart * 100));
+    //   words += `and ${decimalWords} paise`;
+    // }
     return words.trim();
 };
-exports.numberToINRWords = numberToINRWords;
+console.log(numberToWordsINR(123456789.12)); // twelve thousand three hundred and forty-five
+exports.default = numberToWordsINR;
