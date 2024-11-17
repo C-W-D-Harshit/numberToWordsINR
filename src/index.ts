@@ -99,6 +99,4 @@ const numberToWordsINR = (num: number): string => {
   return words.trim();
 };
 
-console.log(numberToWordsINR(123456789.12)); // twelve thousand three hundred and forty-five
-
 export default numberToWordsINR;

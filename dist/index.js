@@ -89,5 +89,4 @@ const numberToWordsINR = (num) => {
     // }
     return words.trim();
 };
-console.log(numberToWordsINR(123456789.12)); // twelve thousand three hundred and forty-five
 exports.default = numberToWordsINR;
