@@ -10,3 +10,4 @@
  * ```
  */
 export declare function numberToWordsINR(num: number): string;
+//# sourceMappingURL=index.d.ts.map

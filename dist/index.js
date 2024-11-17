@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.numberToWordsINR = numberToWordsINR;
 /**
  * Converts a given number into its word representation in the Indian numbering system.
  *
@@ -12,7 +9,7 @@ exports.numberToWordsINR = numberToWordsINR;
  * numberToWordsINR(12345); // returns "twelve thousand three hundred and forty five"
  * ```
  */
-function numberToWordsINR(num) {
+export function numberToWordsINR(num) {
     if (num === 0)
         return "zero";
     const ones = [
