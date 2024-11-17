@@ -11,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.6.3"
-  }
+  },
+  "keywords": [
+    "number",
+    "words",
+    "inr",
+    "indian",
+    "rupee",
+    "indian-numbering-system",
+    "indian-numbering"
+  ]
 }
