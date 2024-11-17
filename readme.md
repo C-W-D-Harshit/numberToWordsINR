@@ -1,4 +1,4 @@
-# number-to-inr-words
+# number-to-words-inr
 
 A lightweight utility to convert numbers into Indian Rupee words, following the Indian numbering system (units, thousands, lakhs, crores). Ideal for use in invoices, checks, financial reports, and other applications requiring numeric amounts in words.
 
@@ -13,7 +13,7 @@ A lightweight utility to convert numbers into Indian Rupee words, following the 
 Install the package via npm:
 
 ```bash
-npm install number-to-inr-words
+npm install number-to-words-inr
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install number-to-inr-words
 Import the function and use it in your application.
 
 ```javascript
-const numberToINRWords = require("number-to-inr-words");
+const numberToINRWords = require("number-to-words-inr");
 
 console.log(numberToINRWords(12345)); // "twelve thousand three hundred and forty-five"
 console.log(numberToINRWords(0)); // "zero"
