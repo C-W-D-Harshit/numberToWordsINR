@@ -1,9 +1,10 @@
 {
   "name": "number-to-words-inr",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Converts numbers to Indian Rupee words in the Indian numbering system (units, thousands, lakhs, crores).",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "tsc"
   },
